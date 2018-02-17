@@ -1,0 +1,10 @@
+{
+  "name": "ga-gtag",
+  "version": "0.0.0",
+  "author": "Andrey Feelashov <andreyfeelashov@gmail.com> (https://andreyfeelashov.gitlab.io/)",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "bump-version": "npm version --no-git-tag-version"
+  }
+}
