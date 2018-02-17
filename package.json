@@ -4,7 +4,12 @@
   "author": "Andrey Feelashov <andreyfeelashov@gmail.com> (https://andreyfeelashov.gitlab.io/)",
   "license": "UNLICENSED",
   "private": true,
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
   "scripts": {
+    "build": "babel \"./source\" --out-file \"./index.js\" --ignore \"*.test.js\" --source-maps",
     "bump-version": "npm version --no-git-tag-version"
   }
 }
