@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "author": "Andrey Feelashov <andreyfeelashov@gmail.com> (https://andreyfeelashov.gitlab.io/)",
   "license": "UNLICENSED",
-  "private": true,
+  "private": false,
+  "main": "./index.js",
   "dependencies": {
     "load-script": "^1.0.0"
   },
@@ -13,6 +14,7 @@
   },
   "scripts": {
     "build": "babel \"./source\" --out-file \"./index.js\" --ignore \"*.test.js\" --source-maps",
-    "bump-version": "npm version --no-git-tag-version"
+    "bump-version": "npm version --no-git-tag-version",
+    "prepublishOnly": "npm run build"
   }
 }
