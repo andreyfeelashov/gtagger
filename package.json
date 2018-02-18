@@ -4,6 +4,9 @@
   "author": "Andrey Feelashov <andreyfeelashov@gmail.com> (https://andreyfeelashov.gitlab.io/)",
   "license": "UNLICENSED",
   "private": true,
+  "dependencies": {
+    "load-script": "^1.0.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1"
