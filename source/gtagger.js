@@ -3,21 +3,25 @@ import loadScript from 'load-script';
 
 const GTAG_SCRIPT_BASE_URL = 'https://www.googletagmanager.com/gtag/js?id=';
 
-export function ga(trackingId) {
-  if (!window.dataLayer) {
-    window.dataLayer = [];
+export class Gtagger {
+
+  static initialize(trackingId) {
+    if (!window.dataLayer) {
+      window.dataLayer = [];
+    }
+
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+
+    this.run('js', new Date());
+    this.run('config', trackingId);
+
+    loadScript(`${GTAG_SCRIPT_BASE_URL}${trackingId}`);
   }
 
-  window.gtag = function () {
-    window.dataLayer.push(arguments);
-  };
+  static run(...parameters) {
+    window.gtag(...parameters);
+  }
 
-  gtag('js', new Date());
-  gtag('config', trackingId);
-
-  loadScript(`${GTAG_SCRIPT_BASE_URL}${trackingId}`);
-}
-
-export function gtag(...parameters) {
-  window.gtag(...parameters);
 }
