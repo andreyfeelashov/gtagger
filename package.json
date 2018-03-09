@@ -4,7 +4,6 @@
   "author": "Andrey Feelashov <andreyfeelashov@gmail.com> (https://andreyfeelashov.gitlab.io/)",
   "license": "MIT",
   "private": false,
-  "main": "./index.js",
   "dependencies": {
     "load-script": "^1.0.0"
   },
