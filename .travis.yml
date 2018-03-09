@@ -1,0 +1,25 @@
+language: node_js
+node_js: 8
+
+cache:
+  directories:
+    - node_modules
+
+stages:
+  - name: build
+    if: branch = master
+  - name: publish
+    if: branch = master
+
+jobs:
+  include:
+    - stage: build
+      script:
+        - npm run build
+    - stage: publish
+      script: skip
+      deploy:
+        - provider: npm
+          email: $NPM_USER_EMAIL
+          api_key: $NPM_USER_AUTH_TOKEN
+          skip_cleanup: true
