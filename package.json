@@ -1,6 +1,6 @@
 {
   "name": "gtagger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An importable Global Site Tag wrapper for Google website tracking.",
   "keywords": [
     "global site tag",
