@@ -1,10 +1,32 @@
 {
-  "name": "ga-gtag",
-  "version": "0.0.0",
+  "name": "gtagger",
+  "version": "1.0.0",
+  "description": "An importable Global Site Tag wrapper for Google website tracking.",
+  "keywords": [
+    "global site tag",
+    "gtag.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreyfeelashov/gtagger.git"
+  },
+  "bugs": "https://github.com/andreyfeelashov/gtagger/issues",
   "author": "Andrey Feelashov <andreyfeelashov@gmail.com> (https://andreyfeelashov.gitlab.io/)",
-  "license": "UNLICENSED",
-  "private": true,
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "load-script": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.0"
+  },
   "scripts": {
-    "bump-version": "npm version --no-git-tag-version"
+    "build": "babel \"./source\" --out-file \"./index.js\" --ignore \"*.test.js\" --source-maps",
+    "bump-version": "npm version --no-git-tag-version",
+    "lint": "npm run lint:js",
+    "lint:js": "eslint \"./source/**/*.js\" --no-inline-config",
+    "prepublishOnly": "npm run build"
   }
 }
