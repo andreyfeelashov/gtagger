@@ -1,6 +1,16 @@
 {
   "name": "gtagger",
   "version": "0.0.0",
+  "description": "An importable Global Site Tag wrapper for Google website tracking.",
+  "keywords": [
+    "global site tag",
+    "gtag.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreyfeelashov/gtagger.git"
+  },
+  "bugs": "https://github.com/andreyfeelashov/gtagger/issues",
   "author": "Andrey Feelashov <andreyfeelashov@gmail.com> (https://andreyfeelashov.gitlab.io/)",
   "license": "MIT",
   "private": false,
